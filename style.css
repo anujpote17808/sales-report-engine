@@ -1,0 +1,160 @@
+/* ---------- Colors ---------- */
+:root {
+    --page: #f4f6f9;
+    --surface: #ffffff;
+    --text: #172b4d;
+    --muted: #64748b;
+    --border: #dfe5ed;
+    --accent: #2563eb;
+}
+
+/* ---------- Page ---------- */
+.stApp {
+    background: var(--page);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
+}
+
+.block-container {
+    max-width: 1280px;
+    padding: 2.5rem 2rem 4rem;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+    color: var(--text) !important;
+    font-size: 2.25rem !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.06rem;
+    padding-bottom: 0.25rem !important;
+}
+
+h2, h3 {
+    color: var(--text) !important;
+    font-weight: 650 !important;
+    letter-spacing: -0.025rem;
+}
+
+h3 {
+    margin-top: 1.75rem !important;
+    padding-bottom: 0.75rem !important;
+    border-bottom: 1px solid var(--border);
+}
+
+[data-testid="stCaptionContainer"] p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ---------- Metric cards ---------- */
+[data-testid="stMetric"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    min-height: 120px;
+    box-shadow: 0 2px 6px rgba(23, 43, 77, 0.035);
+}
+
+[data-testid="stMetricLabel"] p {
+    color: var(--muted) !important;
+    font-size: 0.85rem !important;
+    font-weight: 600;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--text);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+}
+
+/* ---------- Tables ---------- */
+[data-testid="stDataFrame"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(23, 43, 77, 0.025);
+}
+
+/* ---------- Form labels ---------- */
+[data-testid="stWidgetLabel"] p {
+    color: var(--text);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* ---------- Select boxes ---------- */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    background-color: var(--surface);
+    border-color: var(--border);
+    border-radius: 9px;
+    min-height: 44px;
+    color: var(--text);
+}
+
+[data-testid="stSelectbox"] [data-baseweb="select"]:focus-within > div {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ---------- Number inputs ---------- */
+[data-testid="stNumberInput"] [data-baseweb="input"] {
+    background-color: var(--surface);
+    border-color: var(--border);
+    border-radius: 9px;
+}
+
+[data-testid="stNumberInput"] input {
+    color: var(--text);
+    background-color: var(--surface);
+}
+
+[data-testid="stNumberInput"] [data-baseweb="input"]:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ---------- Buttons ---------- */
+.stButton > button {
+    background: var(--accent);
+    color: #ffffff;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+}
+
+.stButton > button:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    color: #ffffff;
+}
+
+.stButton > button:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.3);
+    outline-offset: 2px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+    .block-container {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 18px;
+        min-height: 105px;
+    }
+
+    [data-testid="stMetricValue"] {
+        font-size: 1.7rem;
+    }
+}
